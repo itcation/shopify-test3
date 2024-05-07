@@ -75,7 +75,20 @@
         class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
-111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111
+<table border="1">
+  <tr>
+    <th>Metafield Name</th>
+    <th>Metafield Value</th>
+  </tr>
+  {% for metafield in customer.metafields %}
+  <tr>
+    <td>{{ metafield.name }}</td>
+    <td>{{ metafield.value }}</td>
+  </tr>
+  {% endfor %}
+</table>
+22222222222222222222222222222222222222222222222222222222222222222222222222222
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
