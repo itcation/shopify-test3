@@ -76,9 +76,18 @@
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 11111111111111111111111111111111111111111111111111111111111111111111111111111
-{% for property in product.metafields.information.burn_temperature.value -%}
-  {{ property.first | capitalize }}: {{ property.last }}
-{%- endfor %}
+<table border="1">
+  <tr>
+    <th>Metafield Name</th>
+    <th>Metafield Value</th>
+  </tr>
+  {% for metafield in trigger.table.metafields %}
+  <tr>
+    <td>{{ metafield.name }}</td>
+    <td>{{ metafield.value }}</td>
+  </tr>
+  {% endfor %}
+</table>
 00000000000000000000000000000000000000000000000000000000000000000000000000000
 {% for metafield in product.metafields.custom %}
     {{ metafield | debug }}
