@@ -77,8 +77,9 @@
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 11111111111111111111111111111111111111111111111111111111111111111111111111111
 00000000000000000000000000000000000000000000000000000000000000000000000000000
-{{ event.products | inspect }}
-{{ trigger | debug }}
+{% for metafield in trigger.table.metafields %}
+  {{ metafield | debug }}
+{% endfor %}
 22222222222222222222222222222222222222222222222222222222222222222222222222222
         {%- for block in section.blocks -%}
           {%- case block.type -%}
