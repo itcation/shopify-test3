@@ -88,6 +88,10 @@
   </tr>
   {% endfor %}
 </table>
+00000000000000000000000000000000000000000000000000000000000000000000000000000
+{% for item in product.metafields.information.combine_with.value -%}
+  {{ item.product.title }}
+{%- endfor %}
 22222222222222222222222222222222222222222222222222222222222222222222222222222
         {%- for block in section.blocks -%}
           {%- case block.type -%}
