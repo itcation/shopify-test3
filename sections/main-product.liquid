@@ -76,10 +76,9 @@
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 11111111111111111111111111111111111111111111111111111111111111111111111111111
+{{ event.products | debug }}
 00000000000000000000000000000000000000000000000000000000000000000000000000000
-{% for item in product.metafields -%}
-  {{ item }}
-{%- endfor %}
+{{ product.metafields | debug }}
 22222222222222222222222222222222222222222222222222222222222222222222222222222
         {%- for block in section.blocks -%}
           {%- case block.type -%}
