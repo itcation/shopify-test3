@@ -76,6 +76,9 @@
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 11111111111111111111111111111111111111111111111111111111111111111111111111111
+{% for property in product.metafields.information.burn_temperature.value -%}
+  {{ property.first | capitalize }}: {{ property.last }}
+{%- endfor %}
 00000000000000000000000000000000000000000000000000000000000000000000000000000
 {% for metafield in product.metafields.custom %}
     {{ metafield | debug }}
