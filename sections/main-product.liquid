@@ -79,9 +79,7 @@
 00000000000000000000000000000000000000000000000000000000000000000000000000000
 {% for metafield in product.metafields.custom %}
     {% assign metaValue = product.metafields.custom %}
-    {{ metaValue.name | debug }}
-    {{ metaValue.title | debug }}
-    {{ metaValue.value | debug }}
+    {{ metaValue | debug }}
 {% endfor %}
 22222222222222222222222222222222222222222222222222222222222222222222222222222
         {%- for block in section.blocks -%}
