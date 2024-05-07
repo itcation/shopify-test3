@@ -81,7 +81,7 @@
     <th>Metafield Name</th>
     <th>Metafield Value</th>
   </tr>
-  {% for metafield in product.metafields %}
+  {% for metafield in block.product.metafields %}
   <tr>
     <td>{{ metafield.name }}</td>
     <td>{{ metafield.value }}</td>
@@ -89,17 +89,6 @@
   {% endfor %}
 </table>
 22222222222222222222222222222222222222222222222222222222222222222222222222222
-<div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-  {% if block.settings.metafield %}
-      {% assign dynamicKey = block.settings.metafield %}
-      {% assign metaValue = product.metafields.custom[dynamicKey] %}
-      {{ metaValue }}
-  {% else %}
-    {{ block.settings.content }}
-    {{ block.settings.page.content }}
-  {% endif %}
-</div>
-33333333333333333333333333333333333333333333333333333333333333333333333333333
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
