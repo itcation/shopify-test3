@@ -82,7 +82,7 @@
 ------------------
     Type: {{ product.metafields.information.directions.type }}
 -----------------
-    {{ metafield.value | debug }}
+    {{ event.products | debug }}
 {% endfor %}
 22222222222222222222222222222222222222222222222222222222222222222222222222222
         {%- for block in section.blocks -%}
