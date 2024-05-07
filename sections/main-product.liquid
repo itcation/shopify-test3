@@ -80,9 +80,9 @@
 {% for metafield in product.metafields.custom %}
     {{ metafield | debug }}
 ------------------
-    {{ metafield.value | debug }}
+    {{ metafield.type | debug }}
 -----------------
-    {{ metafield.name | debug }}
+    {{ metafield.value | debug }}
 {% endfor %}
 22222222222222222222222222222222222222222222222222222222222222222222222222222
         {%- for block in section.blocks -%}
