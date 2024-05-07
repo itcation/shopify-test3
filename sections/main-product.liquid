@@ -80,7 +80,7 @@
 {% for metafield in product.metafields.custom %}
     {{ metafield | debug }}
 ------------------
-    {{ metafield.type | debug }}
+    Type: {{ product.metafields.information.directions.type }}
 -----------------
     {{ metafield.value | debug }}
 {% endfor %}
